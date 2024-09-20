@@ -11,7 +11,7 @@ int main(void){
     printf("Name a place: ");
     scanf("%s" place)
     printf("Name a verb: ");
-    fgets(verb, sizeof(verb), stdin);
+    scanf("%s verb")
     strcat(sentence, animal);
     strcat(sentence, " went to the ");
     strcat(sentence, place);
