@@ -1,2 +1,3 @@
-name = input("what is your name?")
-print(":) :)",name,":) :)")
+name = input("What is your name?: ")
+design = input("Create your design: ")
+print( design,name,design)
