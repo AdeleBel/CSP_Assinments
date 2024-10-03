@@ -3,13 +3,15 @@
 
 int hour; 
 
-int main ()
-{
-    time_t rawtime;
-    struct tm *timeinfo;
+int main (){
+ time_t now;
+    struct tm*now_tm;
 
-    time(&rawtime);
-    timeinfo - localtime (&rawtime);
+    time(&NULL);
+    now_tm = localtime(&now);
+    hour = (now_tm->tm_hour)-6;
+    printf()
+
     printf("Current local time and date: %s", asctime(timeinfo));
     printf("Tell me the hour in military time:\n");
     scanf("%d", &hour);
