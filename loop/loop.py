@@ -1,7 +1,3 @@
-import 
-
-x= 0
-
-while x < 21:
-    print(x)
-    x+=1
+fam = ["Elsa","Adele","Ben"]
+for fam in fam:
+    print(f"hello {fam}!")
