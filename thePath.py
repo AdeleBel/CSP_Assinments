@@ -5,6 +5,7 @@ jim = input("One more name: ")
 isJoeAlive = True
 isJimAlive = True
 isGameOver = False
+isJoeWith = True
 print("You,",joe,"and",jim, "are going camping, you are on your way to the cabin. It starts to storm, you hide in a cave but get lost! The storm has passed now. Try and get out.")
 direction = input("You are deep in the forest now, which way do you go? (left or right)")
 if direction == "right":
@@ -41,6 +42,7 @@ if trip == "raft":
  if isJimAlive == False:
   print("OH NO!", joe, "fell, You must keep going")
   isJoeAlive = False
+  isJoeWith = False
  else:
   print("OH NO!", jim, "fell. You must keep going.")
   isJimAlive = False
@@ -74,11 +76,13 @@ if isGameOver == False:
     share = input("eat half or all: ")
     if share == "all":
       isJoeAlive = False
+      isJoeWith = False
       print("OH NO!", joe, "stays sick, and dies. You got better and found your way out. You win!!! ( but live with lefelong guilt of not saving",joe,")")
       isGameOver = True
     elif berries < 30: 
       print("You both stayed sick, and died. You lose")
       isJoeAlive = False 
+      isJoeWith = False
       isGameOver = True
     else: 
       print("You and", joe, "both get better and escape. YOU WIN!")
@@ -90,19 +94,31 @@ if isGameOver == False:
 
 print("Do you want to continue?")
 keepPlay = input("yes or no: ")
-if keepPlay = "no":
+if keepPlay == "no":
   print("Ok. goodbye.")
   isGameOver = True
 else:
   print("YAY! You get home safe")
   if isJoeAlive == False:
     print("You miss your friends...Should you bring them back")
+      
   else:
-    print("You and", joe, "miss", jim)
+    print("You and", joe, "miss", jim, "Should you bring them back?")
+    sanoce = input("yes or no: ")
+    if sanoce == "no":
+      print("You live the rest of your life trumazized from the forest")
+      isGameOver = True
+    else:
+      print("You have to do a sanoces. You get in your car to go to the graveyard.")
 
-  
-  
-
- 
- 
- 
+      print("Your driving down a long street, it dark and the streets are empty.")
+  if isJoeAlive == True: 
+    print("Should you bring",joe,)
+    joeComin = input("yes or no: ")
+    if joeComin == "yes":
+      print("You pick him up and keep driving.")
+      isJoeWith = True
+    else: 
+      isJoeWith = False
+  else:
+    print("You drive to the graveyard to begin the Sanonce")
