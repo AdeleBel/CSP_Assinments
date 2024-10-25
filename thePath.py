@@ -85,7 +85,21 @@ if isGameOver == False:
       isGameOver = True
   else:
     print("Congrats you survied! (a part of you dies here with", joe, "and", jim,")")
-    isGameOver = True
+    
+
+
+print("Do you want to continue?")
+keepPlay = input("yes or no: ")
+if keepPlay = "no":
+  print("Ok. goodbye.")
+  isGameOver = True
+else:
+  print("YAY! You get home safe")
+  if isJoeAlive == False:
+    print("You miss your friends...Should you bring them back")
+  else:
+    print("You and", joe, "miss", jim)
+
   
   
 
